@@ -1,6 +1,3 @@
-/**
- * Created by tylerzubke on 12/21/15.
- */
 (function(){
     'use strict';
 
@@ -17,7 +14,8 @@
                 showMessageAfter: 1200000, //in ms
                 pausePlayerAfter: 10000, //in ms
                 continueButtonClickHandler: null,
-                stopButtonClickHandler: null
+                stopButtonClickHandler: null,
+                ignoreUserActive: false //show message after certain period, regardless of if the user has interacted with player in that time
             },
             timeouts = {
                 countdownTimeoutId: null,
@@ -141,9 +139,13 @@
             player.on('userinactive', function(){
                     startCountdown();
             });
-            player.on('useractive', function(){
+            if(!settings.ignoreUserActive)
+            {
+                player.on('useractive', function(){
                 clearVjsTimeout('countdownTimeoutId');
             });
+            }
+            
         };
 
         player.ready(function(){
