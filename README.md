@@ -38,3 +38,4 @@ and pass in an object of any options you wish to override.
 * `pausePlayerAfter [Number]` Amount of time (in milliseconds) after showing the popup to pause the player.
 * `continueButtonClickHandler [Function]` If you want to do something other than continue playing the video when the user clicks to continue watching. Context is the player object.
 * `stopButtonClickHandler [Function]` If you want to do something other than reset the player back to the initial state when the user clicks to stop watching. Context is the player object.
+* `ignoreUserActive [Boolean]` Message will show after specified amount of time regardless of whether userActive event is fired in that time.
