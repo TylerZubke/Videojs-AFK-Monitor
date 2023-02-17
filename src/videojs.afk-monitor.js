@@ -4,14 +4,14 @@
     function AFKMonitor(options){
         var player   = this,
             defaults = {
-                containerText: 'Are you still watching?',
+                containerText: 'Deseas continuar viendo?',
                 containerClass: '',
-                continueButtonText: 'Yes, Continue',
+                continueButtonText: 'Si, Continue',
                 continueButtonClass: '',
                 stopButtonText: 'No',
                 stopButtonClass: '',
                 waitClass: '',
-                showMessageAfter: 1200000, //in ms
+                showMessageAfter: 12000000, //in ms
                 pausePlayerAfter: 10000, //in ms
                 continueButtonClickHandler: null,
                 stopButtonClickHandler: null,
