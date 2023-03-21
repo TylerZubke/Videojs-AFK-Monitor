@@ -26,7 +26,7 @@
             continueButton,
             stopButton;
 
-        var settings = videojs.mergeOptions(defaults, options);
+        var settings = videojs.obj.merge(defaults, options);
 
         var showAFKMessage = function(){
             clearVjsTimeout('countdownTimeoutId');
@@ -153,6 +153,6 @@
         });
     }
 
-    videojs.plugin('AFKMonitor', AFKMonitor);
+    videojs.registerPlugin('AFKMonitor', AFKMonitor);
 
 })();
